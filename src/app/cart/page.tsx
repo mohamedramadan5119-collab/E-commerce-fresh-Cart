@@ -10,7 +10,7 @@ import { useSession } from "next-auth/react";
 import cartImage from "../../aassets/images/Empty-cart.svg";
 import Link from "next/link";
 import Loading from "../loading";
-import error from '../../aassets/images/404.png'
+import error from '../../aassets/images/404.bcc156d7c71a6cc7b8c0.png'
 
 export default function Cart() {
   const queryClient = useQueryClient();
