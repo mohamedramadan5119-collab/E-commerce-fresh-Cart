@@ -11,7 +11,7 @@ import Image from "next/image"
 import Link from "next/link"
 import userImage from '../../../aassets/images/profile.jpg'
 
-export function DropdownMenuBasic({logout}) {
+export function DropdownMenuBasic({ logout }: { logout: () => void }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
