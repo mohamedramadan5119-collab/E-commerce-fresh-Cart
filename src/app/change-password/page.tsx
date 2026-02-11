@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { updateLoggedPasswordAction } from "@/servises/auth";
+import { updateLoggedPasswordAction } from "../../auth";
 import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 
