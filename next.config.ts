@@ -1,6 +1,4 @@
-import type { NextConfig } from "next";
-
-// هنشيل : NextConfig من هنا عشان ميقعدش يدقق ورا كل خاصية
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -19,6 +17,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-} as any; // ضيفنا دي عشان يقبل الـ eslint من غير اعتراض
+};
 
 export default nextConfig;

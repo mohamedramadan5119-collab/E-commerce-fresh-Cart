@@ -2,7 +2,9 @@ import { ProductItem } from "./types/productinterface";
 import ProductCard from "./_componants/productCard/productCard";
 import Mainslider from "./_componants/Mainslider/Mainslider";
 import CategorySlider from "./_componants/CategorySlider/CategorySlider";
-
+import Image from "next/image";
+import imgNotFound from '../aassets/images/404.png'
+import noProduct from '../aassets/images/NoProducts.svg'
 export const revalidate = 0;
 
 export default async function Home() {
@@ -13,14 +15,22 @@ export default async function Home() {
     });
 
     if (!response.ok) {
-       return <div className="p-10 text-center text-red-500 font-bold">Server unavailable, try again shortly.</div>;
+       return <div className="container ">
+          <div className='w-full h-screen flex justify-center items-center'>
+            <Image  className=' w-full ' src={imgNotFound}  alt='not-found'></Image>
+          </div>
+        </div>;
     }
 
     const resData = await response.json();
     const allProducts = resData.data;
 
     if (!allProducts || allProducts.length === 0) {
-      return <div className="p-10 text-center text-gray-500">No products to display at the moment.</div>;
+      return <div className="container ">
+          <div className='w-full h-screen flex justify-center items-center'>
+            <Image  className=' w-full ' src={noProduct}  alt='not-found'></Image>
+          </div>
+        </div>;
     }
 
     return (
