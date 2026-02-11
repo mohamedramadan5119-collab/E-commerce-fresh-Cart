@@ -10,8 +10,10 @@ export interface failedLogin {
 }
 
 
+
 export interface UserResponse {
-  name: string
-  email: string
-  role: string
+  _id: string;   
+  name: string;
+  email: string;
+  role: string;
 }

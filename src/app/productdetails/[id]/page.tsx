@@ -37,15 +37,25 @@ export default async function ProductDetails(props: myprops) {
         </div>
 
         <div className="md:col-span-2 w-full">
-          <Card className="border-none shadow-none bg-transparent p-0">
+          <Card className="border-none shadow-none relative bg-transparent p-0">
             <CardHeader className="space-y-6 p-0">
-              <div>
-                <Badge
-                  variant="default"
-                  className="bg-green-600 hover:bg-green-700 text-sm px-4 py-1 rounded-full border-none"
-                >
-                  {singleProduct.brand.name}
-                </Badge>
+              <div className=" flex gap-5  ">
+                <div>
+                  <Badge
+                    variant="default"
+                    className="bg-primary hover:bg-green-700 text-sm px-4 py-1 rounded-full border-none"
+                  >
+                    {singleProduct.brand.name}
+                  </Badge>
+                </div>
+
+                <div>
+                  {singleProduct.ratingsAverage > 4.5 && (
+                    <Badge className="bg-primary hover:bg-green-700 text-sm px-4 py-1 rounded-full border-none">
+                      Top Rated
+                    </Badge>
+                  )}
+                </div>
               </div>
 
               <CardTitle className="text-2xl md:text-4xl font-extrabold text-primary tracking-tight">

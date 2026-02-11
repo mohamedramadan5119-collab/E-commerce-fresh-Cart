@@ -13,14 +13,14 @@ export default async function Home() {
     });
 
     if (!response.ok) {
-       return <div className="p-10 text-center text-red-500 font-bold">السيرفر واقع حالياً، جرب كمان شوية</div>;
+       return <div className="p-10 text-center text-red-500 font-bold">Server unavailable, try again shortly.</div>;
     }
 
     const resData = await response.json();
     const allProducts = resData.data;
 
     if (!allProducts || allProducts.length === 0) {
-      return <div className="p-10 text-center text-gray-500">مفيش منتجات نعرضها حالياً</div>;
+      return <div className="p-10 text-center text-gray-500">No products to display at the moment.</div>;
     }
 
     return (
@@ -31,7 +31,7 @@ export default async function Home() {
         <div className="container mx-auto px-4 mt-8">
           <CategorySlider/>
 
-          <h2 className="text-green-600 font-bold text-3xl my-8 border-l-4 border-green-600 pl-4">
+          <h2 className="text-green-600 font-bold text-3xl my-8 pl-4">
             Our Products
           </h2>
 

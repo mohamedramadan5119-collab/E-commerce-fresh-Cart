@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 import { ProductItem } from "../_componants/productimg/productimg.tsx";
-import BreadcrumbSetter from '../_componants/BreadcrumbSetter';
-import ProductCard from "../_componants/productCard/productCard.tsx"; 
+import BreadcrumbSetter from "../_componants/BreadcrumbSetter";
+import ProductCard from "../_componants/productCard/productCard.tsx";
 
 async function getProducts(): Promise<ProductItem[]> {
-  const response = await fetch('https://ecommerce.routemisr.com/api/v1/products', {
-    next: { revalidate: 60 } 
-  });
-  if (!response.ok) throw new Error('Failed to fetch products');
+  const response = await fetch(
+    "https://ecommerce.routemisr.com/api/v1/products",
+    {
+      next: { revalidate: 60 },
+    },
+  );
+  if (!response.ok) throw new Error("Failed to fetch products");
   const result = await response.json();
   return result.data;
 }
