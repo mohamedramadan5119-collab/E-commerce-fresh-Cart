@@ -13,9 +13,9 @@ const token=await getAccessToken()
     const response =await fetch(`${process.env.API}/cart` , {
         cache:'no-store',
         method:'post',
-        headers:{
-            token:token,
-            'Content-type':' application/json'
+        headers: {
+            "Token": token,
+            "Content-Type": "application/json"
         },
         body:JSON.stringify({
             productId
