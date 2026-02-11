@@ -53,9 +53,9 @@ export default function Login() {
   }
 
   return (
-    <div className="container">
-      <div className="flex justify-center items-center w-full md:h-11/12">
-        <div className="w-full max-w-md mx-auto p-8 rounded-2xl mt-20 bg-gray-200 shadow-lg">
+  
+
+        <div className="w-4/5  md:w-3/4 mx-auto p-10 rounded-2xl mt-10">
       <h2 className="text-green-500 font-bold text-3xl mb-6">Login</h2>
 
       <Form {...form}>
@@ -139,7 +139,7 @@ export default function Login() {
         </form>
       </Form>
     </div>
-      </div>
-    </div>
+
+
   );
 }

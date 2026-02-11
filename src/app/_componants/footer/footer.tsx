@@ -59,7 +59,7 @@ export default function Footer() {
             <span className="font-semibold text-gray-700">
               Get deliveries with FreshCart
             </span>
-            <div className="flex gap-1">
+            <div className="flex flex-col md:flex-row gap-2 items-center">
               <Image
               width={100}
               height={100}

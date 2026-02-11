@@ -55,7 +55,7 @@ export default function Register() {
   }
   return (
     <>
-      <div className="  w-1/2 mx-auto p-10 rounded-2xl mt-10 bg-gray-200">
+      <div className=" w-4/5  md:w-3/4 mx-auto p-10 rounded-2xl mt-10 ">
         <h2 className="text-green-500 font-bold text-2xl">Register Now</h2>
         <form onSubmit={form.handleSubmit(SubmitForm)}>
           <div className=" mt-4">
