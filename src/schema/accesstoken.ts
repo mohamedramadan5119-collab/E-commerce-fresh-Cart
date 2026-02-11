@@ -1,13 +1,18 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "../app/api/auth/[...nextauth]/route"; // تأكد من مسار الـ route بتاعك
+import { decode } from "next-auth/jwt"
+import { cookies } from "next/headers"
 
-export async function getAccessToken() {
-    // دي بتعرف تجيب الكوكيز سواء إنت في localhost أو فيرسيل لوحدها
-    const session = await getServerSession(authOptions);
+export async function getAccessToken(){
 
-    if (session && session.token) {
-        return session.token;
-    }
+    const cookieStore = await cookies();
+    const authToken = cookieStore.get('__Secure-next-auth.session-token')?.value 
+                     || cookieStore.get('next-auth.session-token')?.value;
 
-    return null;
+    if (!authToken) return null;
+
+    const tokenData = await decode({
+        token: authToken, 
+        secret: process.env.NEXTAUTH_SECRET 
+    })
+
+    return tokenData?.token;
 }
