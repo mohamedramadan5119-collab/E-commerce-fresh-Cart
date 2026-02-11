@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Footer() {
@@ -54,17 +55,21 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <span className="font-semibold text-gray-700">
               Get deliveries with FreshCart
             </span>
-            <div className="flex gap-2">
-              <img
+            <div className="flex gap-1">
+              <Image
+              width={100}
+              height={100}
                 src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                 alt="App Store"
                 className="h-8 cursor-pointer hover:scale-105 transition-transform"
               />
-              <img
+              <Image
+              width={100}
+              height={100}
                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                 alt="Google Play"
                 className="h-8 cursor-pointer hover:scale-105 transition-transform"
