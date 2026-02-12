@@ -126,7 +126,7 @@ export default function ProfilePage() {
                 Security & Settings
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link href="/forgot-password" title="Change Password">
+                <Link href="/change-password" title="Change Password">
                   <button className="w-full h-full text-left p-5 border border-gray-50 rounded-2xl bg-[#f8f9fa] hover:bg-white hover:shadow-md transition-all group">
                     <p className="text-sm font-bold cursor-pointer text-gray-800 group-hover:text-[#0aad0a]">
                       Change Password

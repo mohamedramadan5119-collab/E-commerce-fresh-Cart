@@ -63,6 +63,7 @@ export const authOptions:NextAuthOptions ={
                 if (session.user) {
                     (session.user as any)._id = token.userId;
                     session.user = token.user as any;
+                    (session as any).token = token.token;
                 }
                 return session;
             }
