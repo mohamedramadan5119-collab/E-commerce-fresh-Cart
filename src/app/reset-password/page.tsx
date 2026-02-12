@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { resetPasswordAction } from "@/auth"; 
+import { resetPasswordAction } from "../../auth"; 
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 

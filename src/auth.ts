@@ -49,17 +49,14 @@ export const authOptions:NextAuthOptions ={
     ],
         callbacks: {
             jwt: async ({ token, user }) => {
-                // الـ user ده بيملي البيانات أول ما بتعمل Login بس
                 if (user) {
                     token.user = (user as any).user;
-                    // هنا بنسحب الـ _id من بيانات اليوزر اللي راجعة من الـ API ونخزنه في التوكن
                     token.userId = (user as any).user._id; 
                     token.token = (user as any).token;
                 }
                 return token;
             },
             session: async ({ session, token }) => {
-                // هنا بننقل الـ userId من التوكن للسيشن عشان الصفحة تقدر تشوفه
                 if (session.user) {
                     (session.user as any)._id = token.userId;
                     session.user = token.user as any;
@@ -71,11 +68,8 @@ export const authOptions:NextAuthOptions ={
 }
 
 
-// ضيف دول تحت خالص في نفس الملف src/servises/auth.ts
 
 const API_URL = process.env.API || "https://ecommerce.routemisr.com/api/v1";
-
-// 1. دالة طلب كود التحقق
 export async function forgotPasswordAction(email: string) {
     const response = await fetch(`${API_URL}/auth/forgotPasswords`, {
         method: 'POST',
@@ -85,23 +79,20 @@ export async function forgotPasswordAction(email: string) {
     return await response.json();
 }
 
-// 2. دالة التأكد من الكود
 export async function verifyCodeAction(resetCode: string) {
-    // تأكد أن الكود المرسل نصي وليس به مسافات
     const response = await fetch(`${API_URL}/auth/verifyResetCode`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-            resetCode: resetCode.trim() // مسح أي مسافات بالخطأ
+            resetCode: resetCode.trim()
         }),
     });
     return await response.json();
 }
 
-// 3. دالة تعيين الباسورد الجديد
 export async function resetPasswordAction(data: any) {
     const response = await fetch(`${API_URL}/auth/resetPassword`, {
-        method: 'PUT', // الـ API ده بيستخدم PUT
+        method: 'PUT', 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
     });
@@ -113,7 +104,7 @@ export async function updateLoggedPasswordAction(data: any, token: string) {
         method: 'PUT',
         headers: { 
             'Content-Type': 'application/json',
-            'token': token // هنا لازم نبعت التوكن بتاع المستخدم
+            'token': token 
         },
         body: JSON.stringify(data),
     });

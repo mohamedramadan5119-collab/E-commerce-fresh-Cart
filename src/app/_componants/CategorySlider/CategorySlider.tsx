@@ -1,4 +1,4 @@
-import { Category } from '@/app/types/productinterface'
+import { Category } from '../../types/productinterface'
 import React from 'react'
 import Slider from '../Slider/Slider'
 

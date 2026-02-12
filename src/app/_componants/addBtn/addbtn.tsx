@@ -1,7 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { CardFooter } from "@/components/ui/card";
-import { addToCart } from "@/servises/cart/addproducttocart";
+import { Button } from "../../../components/ui/button";
+import { CardFooter } from "../../../components/ui/card";
+import { addToCart } from "../../../servises/cart/addproducttocart";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React from "react";
 import toast from "react-hot-toast";
@@ -10,10 +10,6 @@ export default function AddBtn({ productId }: { productId: string }) {
   const queryClient = useQueryClient();
 
   const {
-    data,
-    isPending,
-    error,
-    isError,
     mutate: addProductToCart,
   } = useMutation({
     mutationFn: addToCart,

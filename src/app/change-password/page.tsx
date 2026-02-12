@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { updateLoggedPasswordAction } from "../../auth";
-import { useSession, signOut } from "next-auth/react"; // ضفنا signOut هنا
+import { useSession, signOut } from "next-auth/react"; 
 import toast from "react-hot-toast";
 
 export default function ChangePasswordPage() {
@@ -29,7 +29,6 @@ export default function ChangePasswordPage() {
       if (res.message === "success") {
         toast.success("Password changed successfully! Redirecting to login...");
         
-        // التعديل هنا: بنقول لـ Next-Auth بعد ما تخرج وديه لصفحة الـ login
         setTimeout(() => {
           signOut({ callbackUrl: "/login" }); 
         }, 2000); 

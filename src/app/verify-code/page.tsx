@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { verifyCodeAction } from "@/auth"; 
+import { verifyCodeAction } from "../../auth"; 
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 

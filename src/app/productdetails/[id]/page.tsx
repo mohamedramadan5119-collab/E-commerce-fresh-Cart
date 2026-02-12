@@ -8,9 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { ProductImg } from "@/app/_componants/productimg/productimg";
-import AddBtn from "@/app/_componants/addBtn/addbtn";
-import BreadcrumbSetter from "@/app/_componants/BreadcrumbSetter";
+import { ProductImg } from "../../_componants/productimg/productimg";
+import AddBtn from "../../_componants/addBtn/addbtn";
+import BreadcrumbSetter from "../../_componants/BreadcrumbSetter";
 
 type myprops = {
   params: {

@@ -1,7 +1,7 @@
 import React from "react";
-import { ProductItem } from "../_componants/productimg/productimg.tsx";
+import { ProductItem } from "../_componants/productimg/productimg";
 import BreadcrumbSetter from "../_componants/BreadcrumbSetter";
-import ProductCard from "../_componants/productCard/productCard.tsx";
+import ProductCard from "../_componants/productCard/productCard";
 
 async function getProducts(): Promise<ProductItem[]> {
   const response = await fetch(

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { useWishlist } from "@/hooks/useWishlist";
+import { useWishlist } from "../../hooks/useWishlist";
 import ProductCard from "../_componants/productCard/productCard";
 import { Trash2 } from "lucide-react"; 
 import toast from "react-hot-toast"; 

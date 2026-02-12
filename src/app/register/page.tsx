@@ -1,8 +1,8 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Field, FieldError, FieldLabel } from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
-import { schema } from "@/schema/registerschema";
+import { Button } from "../../components/ui/button";
+import { Field, FieldError, FieldLabel } from "../../components/ui/field";
+import { Input } from "../../components/ui/input";
+import { schema } from "../../schema/registerschema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import React from "react";

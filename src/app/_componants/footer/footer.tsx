@@ -26,32 +26,36 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-6 py-6 border-y border-gray-200">
+        <div className="flex flex-col lg:flex-row justify-between items-center  py-6 border-y border-gray-200">
           <div className="flex items-center gap-4">
             <span className="font-semibold text-gray-700">
               Payment Partners
             </span>
-            <div className="flex items-center gap-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
-                alt="Visa"
-                className="h-4"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-                alt="PayPal"
-                className="h-5"
-              />
-              <img
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-5 ">
+              <div className="flex gap-3 ">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
+                    alt="Visa"
+                    className="h-4"
+                  />
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+                    alt="PayPal"
+                    className="h-5"
+                  />
+              </div>
+              <div className="flex gap-3">
+                <img
                 src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
                 alt="Mastercard"
                 className="h-6"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg"
                 alt="Amex"
                 className="h-6"
               />
+              </div>
             </div>
           </div>
 
@@ -78,12 +82,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* حقوق النشر */}
         <div className="mt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
           <p>© 2026 FreshCart Ecommerce. All rights reserved.</p>
           <p>
-            Designed by{" "}
-            <span className="text-primary font-bold">
+            Designed by  
+            <span className=" ps-1 text-primary font-bold">
               Mohamed Ramadan saaed
             </span>
           </p>

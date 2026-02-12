@@ -1,9 +1,5 @@
-
 "use server"
-import { getAccessToken } from "@/schema/accesstoken";
-import { count } from "console";
-
-
+import { getAccessToken } from "../../schema/accesstoken";
 export async function updateCartItem({productId , count}:{productId:string , count:number}){
 
 const token=await getAccessToken()

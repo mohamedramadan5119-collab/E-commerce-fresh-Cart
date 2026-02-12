@@ -1,10 +1,16 @@
 'use client'
 import React from 'react'
+import noProduct from '../../../aassets/images/NoProducts.svg'
+import Image from 'next/image'
 
 export default function Error() {
   return (
     <>
-        <div className='text-center mt-20 text-2xl font-bold '>Something Went Wrong While Loading Product Details. Please Try Again Later.</div>
+      <div className="container">
+        <div className="flex justify-center items-center">
+          <Image src={noProduct} alt='noProduct'/>
+        </div>
+      </div>
     </>
   )
 }

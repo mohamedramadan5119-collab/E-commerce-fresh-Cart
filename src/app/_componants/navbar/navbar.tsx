@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "../../../components/ui/badge";
 import { DropdownMenuBasic } from "../dropDown/DropDown";
 import { useQuery } from "@tanstack/react-query";
-import { CartResponse } from "@/app/types/cart-response";
-import { useWishlist } from "@/hooks/useWishlist";
+import { CartResponse } from "../../types/cart-response";
+import { useWishlist } from "../../../hooks/useWishlist";
 import logo from "../../../aassets/images/logo2.jpg";
 
 export default function Navbar() {

@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "../../../components/ui/button";
+import { Input } from "../../../components/ui/input";
 import {
   Form,
   FormControl,
@@ -9,14 +9,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "../../../components/ui/form";
 import { useForm } from "react-hook-form";
-import Link from "next/link";
 import toast from "react-hot-toast";
 import { useState } from "react";
-import { payCashOrder } from "@/servises/cart/pay-cash";
-import { shipping } from "@/app/types/cart-response";
-import { payOnlineOrder } from "@/servises/cart/pay-online";
+import { payCashOrder } from "../../../servises/cart/pay-cash";
+import { shipping } from "../../types/cart-response";
+import { payOnlineOrder } from "../../../servises/cart/pay-online";
 
 export default function CheckoutForm({ cartId }: { cartId: string }) {
   const [isLoading, setIsLoading] = useState(false);

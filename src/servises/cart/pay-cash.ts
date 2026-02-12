@@ -1,5 +1,5 @@
 "use server"
-import { shipping } from "@/app/types/cart-response";
+import { shipping } from "../../app/types/cart-response";
 import { getAccessToken } from "@/schema/accesstoken";
 
 

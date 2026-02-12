@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { ProductItem } from "@/app/types/productinterface";
-import { Card } from "@/components/ui/card";
+import { ProductItem } from "../../types/productinterface";
+import { Card } from "../../../components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import AddBtn from "../addBtn/addbtn";
-import { useWishlist } from "@/hooks/useWishlist";
+import { useWishlist } from "../../../hooks/useWishlist";
 
 export default function ProductCard({ prod }: { prod: ProductItem }) {
   const { wishlistQuery, addMutate, removeMutate } = useWishlist();

@@ -1,6 +1,6 @@
 "use server"
-import { shipping } from "@/app/types/cart-response";
-import { getAccessToken } from "@/schema/accesstoken";
+import { shipping } from "../../app/types/cart-response";
+import { getAccessToken } from "../../schema/accesstoken";
 
 
 export async function payOnlineOrder(carttId:string , shippingAddress:shipping){

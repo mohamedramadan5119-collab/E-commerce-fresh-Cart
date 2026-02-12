@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
-import { Category } from "@/app/types/productinterface";
+import { Category } from "../../types/productinterface";
 
 export default function Slider({ categories }: { categories: Category[] }) {
   return (

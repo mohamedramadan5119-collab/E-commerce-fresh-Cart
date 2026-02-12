@@ -60,9 +60,9 @@ export default async function Home() {
     return (
       <div className="h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-xl font-semibold text-gray-700">تأكد من اتصالك بالإنترنت.</p>
+          <p className="text-xl font-semibold text-gray-700">No internet connection.</p>
           <button onClick={() => window.location.reload()} className="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg">
-            إعادة المحاولة
+            Try again
           </button>
         </div>
       </div>

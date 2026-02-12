@@ -1,15 +1,12 @@
 "use server"
-import { getAccessToken } from "@/schema/accesstoken";
-import { redirect } from "next/navigation"; // استيراد دالة التحويل
+import { getAccessToken } from "../../schema/accesstoken";
+import { redirect } from "next/navigation";
 
 export async function addToCart(productId: string) {
     const token = await getAccessToken();
 
-    // إذا لم يوجد توكن، يتم تحويل المستخدم مباشرة لصفحة الـ Login
     if (!token) {
         redirect("/login"); 
-        // ملاحظة: دالة redirect في Server Actions تعمل عن طريق إلقاء Error خاص 
-        // لذا يجب أن تكون خارج بلوك الـ try/catch أو يتم التعامل معها بحذر
     }
 
     const baseUrl = process.env.API || "https://ecommerce.routemisr.com/api/v1";

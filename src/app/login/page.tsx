@@ -15,7 +15,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
-import { loginSchema } from "@/schema/loginSchema";
+import { loginSchema } from "../../schema/loginSchema";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
