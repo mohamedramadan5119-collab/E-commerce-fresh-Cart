@@ -7,7 +7,7 @@ export default function Error() {
   return (
     <>
       <div className="container">
-        <div className="flex justify-center items-center">
+        <div className="flex w-full h-screen justify-center items-center">
           <Image src={noProduct} alt='noProduct'/>
         </div>
       </div>
